@@ -8,7 +8,7 @@ import {CountryDescriptionInterface} from '../../services/country-description';
   styles: [require('./country-description.scss')]
 })
 
-export class CountryDescriptionComponent {
+export class CountryDescriptionCmp {
 
   @Input() countrydescription: CountryDescriptionInterface
 }

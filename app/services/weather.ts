@@ -30,8 +30,8 @@ export class WeatherService {
     lng: number;
 
     constructor(private http:Http) {
-        this.url = 'http://api.geonames.org/findNearByWeatherJSON?&username=aroget';
-        // this.url = './mock/weather.json';
+        // this.url = 'http://api.geonames.org/findNearByWeatherJSON?&username=aroget';
+        this.url = './mock/weather.json';
     }
 
     getData(lat, lng) {

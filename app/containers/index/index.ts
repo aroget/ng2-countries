@@ -1,12 +1,12 @@
 import {Component} from 'angular2/core';
 
-import {SearchFormComponent} from '../search-form/search-form';
+import {SearchFormCmp} from '../../components/search-form/index';
 
 @Component({
     selector: 'index',
     template: require('./index.html'),
     styles: [require('./index.scss')],
-    directives: [SearchFormComponent]
+    directives: [SearchFormCmp]
 })
 
-export class IndexComponent { }
+export class IndexCmp { }

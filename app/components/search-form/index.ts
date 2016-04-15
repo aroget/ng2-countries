@@ -15,7 +15,7 @@ import {ResultsInterface} from '../../services/main-search';
     directives: [FORM_DIRECTIVES, CORE_DIRECTIVES]
 })
 
-export class SearchFormComponent {
+export class SearchFormCmp {
     query = new Control();
     results: ResultsInterface;
     error: string;

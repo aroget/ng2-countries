@@ -14,7 +14,7 @@ const PATHS = {
 const common = {
   entry: {
     vendor: ['./app/vendor.ts'],
-    main: ['./app/main.ts']
+    main: ['./app/boot.component.ts']
   },
   output: {
     filename: '[name].bundle.js',

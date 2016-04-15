@@ -6,8 +6,8 @@ import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
 
-import {IndexComponent} from './components/index/index';
-import {ResultsComponent} from './components/results/results';
+import {IndexCmp} from './containers/index/index';
+import {ResultsCmp} from './containers/results/index';
 
 @Component({
     selector: 'app',
@@ -19,8 +19,8 @@ import {ResultsComponent} from './components/results/results';
 })
 
 @RouteConfig([
-    { path: '/', name: 'Index', component: IndexComponent, useAsDefault: true },
-    { path: '/search/:name', name: 'Results', component: ResultsComponent }
+    { path: '/', name: 'Index', component: IndexCmp, useAsDefault: true },
+    { path: '/results/:name', name: 'Results', component: ResultsCmp }
 ])
 
-export class AppComponent { }
+export class AppCmp { }

@@ -3,25 +3,26 @@ import {HTTP_PROVIDERS, Http} from 'angular2/http';
 import {RouteParams} from 'angular2/router';
 import * as Rx from 'rxjs/Rx';
 
+
 import {ResultsInterface} from '../../services/main-search';
 
 import {CountryDetailsInterface} from '../../services/country-details';
 import {CountryDetailsService} from '../../services/country-details';
-import {CountryDetailsComponent} from '../country-details/country-details';
+import {CountryDetailsCmp} from '../../components/country-details/index';
 
 import {WeatherInterface} from '../../services/weather';
 import {WeatherService} from '../../services/weather';
-import {WeatherComponent} from '../weather-details/weather-details';
+import {WeatherCmp} from '../../components/weather-details/index';
 
-import {GalleryComponent} from '../gallery/gallery';
-import {ImagesService} from '../../services/images';
 import {ImagesInterface} from '../../services/images';
+import {ImagesService} from '../../services/images';
+import {GalleryCmp} from '../../components/gallery/index';
 
-import {CountryDescriptionComponent} from '../country-description/country-description';
-import {CountryDescriptionService} from '../../services/country-description';
 import {CountryDescriptionInterface} from '../../services/country-description';
+import {CountryDescriptionService} from '../../services/country-description';
+import {CountryDescriptionCmp} from '../../components/country-description/index';
 
-import {GoogleMapComponent} from '../google-map/google-map';
+import {GoogleMapCmp} from '../../components/google-map/index';
 
 
 
@@ -30,10 +31,10 @@ import {GoogleMapComponent} from '../google-map/google-map';
     template: require('./results.html'),
     styles: [require('./results.scss')],
     providers: [HTTP_PROVIDERS, CountryDetailsService, WeatherService, ImagesService, CountryDescriptionService],
-    directives: [CountryDetailsComponent, WeatherComponent, GalleryComponent, CountryDescriptionComponent, GoogleMapComponent]
+    directives: [CountryDetailsCmp, WeatherCmp, GalleryCmp, CountryDescriptionCmp, GoogleMapCmp]
 })
 
-export class ResultsComponent {
+export class ResultsCmp {
     country: string;
     lng: number;
     lat: number;
@@ -56,8 +57,8 @@ export class ResultsComponent {
         this.name = params.get('name');
         this.country = params.get('country');
         this.lang = params.get('lang');
-        this.lng = parseInt(params.get('lng'), 10);
-        this.lat = parseInt(params.get('lat'), 10);
+        this.lng = parseFloat(params.get('lng'));
+        this.lat = parseFloat(params.get('lat'));
     }
 
     getData() {

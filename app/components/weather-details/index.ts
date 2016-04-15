@@ -8,7 +8,7 @@ import {WeatherInterface} from '../../services/weather';
   styles: [require('./weather-details.scss')]
 })
 
-export class WeatherComponent {
+export class WeatherCmp {
 
   @Input() weatherdetails: WeatherInterface
 

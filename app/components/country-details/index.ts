@@ -6,7 +6,7 @@ import {Component, Input} from 'angular2/core';
   styles: [require('./country-details.scss')]
 })
 
-export class CountryDetailsComponent {
+export class CountryDetailsCmp {
 
   @Input() countrydetails: any;
 

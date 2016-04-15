@@ -8,7 +8,7 @@ import {ImagesInterface} from '../../services/images';
   styles: [require('./gallery.scss')]
 })
 
-export class GalleryComponent {
+export class GalleryCmp {
 
   @Input() images: ImagesInterface
 }
