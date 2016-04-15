@@ -1,0 +1,10 @@
+<input [ngFormControl]="query" type="text">
+
+<span *ngIf="error" class="error">{{error}}</span>
+
+<ul class="search-suggestions" *ngIf="results">
+  <li *ngFor="#result of results" (click)=handleClick(result)>
+    <span><img src="http://www.geonames.org/flags/x/{{result.countryCode | lowercase}}.gif"></span>
+    {{result.name}}, {{result.countryName}}
+  </li>
+</ul>
