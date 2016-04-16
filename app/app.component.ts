@@ -12,7 +12,11 @@ import {ResultsCmp} from './containers/results/index';
 @Component({
     selector: 'app',
     template: `
-    <router-outlet></router-outlet>
+    <div class="container">
+      <div id="app" class="six columns offset-by-three column">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
     `,
     directives: [ROUTER_DIRECTIVES],
     providers: [ROUTER_PROVIDERS]

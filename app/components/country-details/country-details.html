@@ -1,10 +1,21 @@
-<div>
-  <div>
-    <p class="title">{{countrydetails.countryName}}</p>
-    <p class="subtitle">{{countrydetails.capital}}</p>
-    <p>{{countrydetails.continentName}}</p>
-    <p>Area: {{countrydetails.areaInSqKm}}</p>
-    <p>Currency: {{countrydetails.currencyCode}}</p>
-    <p>Language: {{countrydetails.languages}}</p>
+<div class="country-details">
+  <div class="row">
+    <p class="title one-half column">Name:</p>
+    <p class="one-half column">{{countrydetails.countryName}}</p>
+  </div>
+
+  <div class="row">
+    <p class="title one-half column">Capital:</p>
+    <p class="one-half column">{{countrydetails.capital}}</p>
+  </div>
+
+  <div class="row">
+    <p class="title one-half column">Continent:</p>
+    <p class="one-half column">{{countrydetails.continentName}}</p>
+  </div>
+
+  <div class="row">
+    <p class="title one-half column">Currency:</p>
+    <p class="one-half column">{{countrydetails.currencyCode}}</p>
   </div>
 </div>

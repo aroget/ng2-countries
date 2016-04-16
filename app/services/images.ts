@@ -31,8 +31,8 @@ export class ImagesService {
     url: string;
 
     constructor(private http:Http) {
-        // this.url = 'https://pixabay.com/api/?key=13458-407c2fb8563aa4b137d7aaad2&image_type=photo&orientation=horizontal&per_page=3';
-        this.url = './mock/images.json';
+        this.url = 'https://pixabay.com/api/?key=13458-407c2fb8563aa4b137d7aaad2&image_type=photo&orientation=horizontal&per_page=3';
+        // this.url = './mock/images.json';
     }
 
     getData(query) {

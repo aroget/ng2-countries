@@ -4,6 +4,8 @@ const webpack = require('webpack');
 
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 const TARGET = process.env.npm_lifecycle_event;
 
 const PATHS = {
@@ -28,8 +30,10 @@ const common = {
       title: 'NG2 Starter',
       template: 'index.template.ejs',
       baseHref: '/',
+      commonStyles: ['/public/styles/main.css'],
       unsupportedBrowser: true,
       mobile: true,
+      hash: true,
       appMountId: 'app'
     }),
   ],
@@ -85,6 +89,9 @@ if(TARGET === 'build') {
       //   comments: false
       // }),
       new webpack.optimize.DedupePlugin(),
+      new CopyWebpackPlugin([
+            { from: 'public', to: 'public' }
+      ]),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': '"production"'
       }),

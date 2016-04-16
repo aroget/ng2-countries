@@ -1,5 +1,9 @@
-<google-map></google-map>
-<country-details *ngIf="countrydetails" [countrydetails]="countrydetails"></country-details>
-<weather-details *ngIf="weatherdetails" [weatherdetails]="weatherdetails"></weather-details>
-<gallery *ngIf="images" [images]="images"></gallery>
-<country-description *ngIf="countrydescription" [countrydescription]="countrydescription"></country-description>
+<div class="results">
+  <gallery *ngIf="images" [images]="images"></gallery>
+  <country-details *ngIf="countrydetails" [countrydetails]="countrydetails"></country-details>
+  <hr/>
+  <weather-details *ngIf="weatherdetails" [weatherdetails]="weatherdetails"></weather-details>
+  <hr/>
+  <country-description *ngIf="countrydescription" [countrydescription]="countrydescription"></country-description>
+  <google-map></google-map>
+</div>

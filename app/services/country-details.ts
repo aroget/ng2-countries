@@ -30,8 +30,8 @@ export class CountryDetailsService {
     lang: string;
 
     constructor(private http:Http) {
-        // this.url = 'http://api.geonames.org/countryInfoJSON?formatted=true&username=aroget&style=full';
-        this.url = './mock/country-details.json';
+        this.url = 'http://api.geonames.org/countryInfoJSON?formatted=true&username=aroget&style=full';
+        // this.url = './mock/country-details.json';
     }
 
     getData(country, lang) {

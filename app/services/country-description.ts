@@ -23,8 +23,8 @@ export class CountryDescriptionService {
     url: string;
 
     constructor(private http:Http) {
-        // this.url = 'http://api.geonames.org/wikipediaSearchJSON?formatted=true&maxRows=1&username=aroget&style=full';
-        this.url = './mock/country-description.json';
+        this.url = 'http://api.geonames.org/wikipediaSearchJSON?formatted=true&maxRows=1&username=aroget&style=full';
+        // this.url = './mock/country-description.json';
     }
 
     getData(query, lang) {

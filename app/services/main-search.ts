@@ -28,8 +28,8 @@ export class MainSearch {
     url: string;
 
     constructor(private http:Http) {
-        // this.url = 'http://api.geonames.org/searchJSON?formatted=true&maxRows=10&lang=en&username=aroget&style=medium';
-        this.url = './mock/data.json';
+        this.url = 'http://api.geonames.org/searchJSON?formatted=true&maxRows=10&lang=en&username=aroget&style=medium';
+        // this.url = './mock/data.json';
     }
 
     getData(query) {
