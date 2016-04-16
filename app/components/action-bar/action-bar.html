@@ -1,0 +1,13 @@
+<div class="action-bar">
+  <div class="row">
+    <div class="one-half column action-bar">
+      <a [routerLink]="['Index']">Home</a>
+    </div>
+
+    <select (change)=onChange($event); class="one-half column">
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+      <option value="es">ES</option>
+    </select>
+  </div>
+</div>

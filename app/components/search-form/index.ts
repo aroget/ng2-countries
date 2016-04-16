@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
 import {Control, FORM_DIRECTIVES, CORE_DIRECTIVES} from 'angular2/common';
 import {Router} from 'angular2/router';
@@ -19,6 +19,8 @@ export class SearchFormCmp {
     query = new Control();
     results: ResultsInterface;
     error: string;
+
+    @Input() locale: string;
 
     constructor(
         private service : MainSearch,
@@ -41,7 +43,7 @@ export class SearchFormCmp {
     handleClick(target) {
       this.router.navigate(['Results', {
                           name: this.query.value,
-                          lang: 'en',
+                          lang: this.locale,
                           lat: target.lat,
                           lng: target.lng,
                           country: target.countryCode
@@ -51,6 +53,4 @@ export class SearchFormCmp {
     handleError() {
         this.error = 'Your country was not found';
     }
-
-
 }

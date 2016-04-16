@@ -3,6 +3,7 @@ import {HTTP_PROVIDERS, Http} from 'angular2/http';
 import {RouteParams} from 'angular2/router';
 import * as Rx from 'rxjs/Rx';
 
+import {ActionBarCmp} from '../../components/action-bar/index';
 
 import {ResultsInterface} from '../../services/main-search';
 
@@ -31,7 +32,7 @@ import {GoogleMapCmp} from '../../components/google-map/index';
     template: require('./results.html'),
     styles: [require('./results.scss')],
     providers: [HTTP_PROVIDERS, CountryDetailsService, WeatherService, ImagesService, CountryDescriptionService],
-    directives: [CountryDetailsCmp, WeatherCmp, GalleryCmp, CountryDescriptionCmp, GoogleMapCmp]
+    directives: [ActionBarCmp, CountryDetailsCmp, WeatherCmp, GalleryCmp, CountryDescriptionCmp, GoogleMapCmp]
 })
 
 export class ResultsCmp {
@@ -71,9 +72,8 @@ export class ResultsCmp {
         res => {
           this.countrydetails = res[0].geonames[0],
           this.weatherdetails = res[1].weatherObservation,
-          this.images = res[2].hits,
+          this.images = res[2].hits.length == 3 ? res[2].hits : null,
           this.countrydescription = res[3].geonames
-          console.log(res)
         },
         err => console.log(err)
       );

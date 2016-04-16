@@ -6,6 +6,7 @@
     "clean": "rm -rf ./dist && mkdir dist",
     "prebuild": "npm run clean",
     "build": "webpack",
+    "deploy": "firebase deploy",
     "postinstall": "typings install"
   },
   "license": "ISC",
@@ -13,6 +14,7 @@
     "angular2": "2.0.0-beta.13",
     "angular2-google-maps": "^0.9.0",
     "es6-shim": "^0.35.0",
+    "express": "^4.13.4",
     "google-maps": "^3.2.1",
     "html-loader": "^0.4.3",
     "reflect-metadata": "0.1.2",
